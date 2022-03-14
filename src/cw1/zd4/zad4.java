@@ -10,6 +10,7 @@ public class zad4 {
             System.out.println("Heloo World");
             counter ++;
 
+
         }
 
 
