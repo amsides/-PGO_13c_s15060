@@ -7,20 +7,35 @@ public class zad2 {
     public static void main( String [] args) {
 
 
-        Scanner s1 = new Scanner(System.in);
 
-        int a = s1.nextInt(), b = s1.nextInt(), c = s1.nextInt();
 
-        System.out.println(a +" "+ b +"  "+ c);
+        Scanner scanner = new Scanner(System.in);
 
-        if (a > b  && a>c) {
+        int a = scanner.nextInt(),
+                b = scanner.nextInt(),
+                c = scanner.nextInt();
 
-            int tmp=0;
+        System.out.println(a  + " " + b + " " + c);
+
+        if(a > b && a > c)
+        {
+            int tmp = c;
             c = a;
             a = tmp;
-
-
         }
+        if(b > a && b > c)
+        {
+            int tmp = c;
+            c = b;
+            b = tmp;
+        }
+        if(a > b)
+        {
+            int tmp = b;
+            b = a;
+            a = tmp;
+        }
+        System.out.println(a  + " " + b + " " + c);
 
 
 
