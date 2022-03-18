@@ -14,7 +14,8 @@ public class zad7 {
 
         System.out.print("Wprowadź liczbę większą niż 5  oraz liczbę nie parzystą :");
         int n = s.nextInt();
-        if (n < 5 && n % 2 != 1) {
+
+        if (n < 5 || n % 2 == 0) {
             System.out.println("Błedna liczba !!!");
             System.out.println("Wprowadź poprawną lczbę");
 
