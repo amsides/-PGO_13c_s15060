@@ -14,6 +14,9 @@ public class Person {
     private LocalDate dateOfBirth;
     private Adress adress;
     private List<Book> books = new ArrayList<>();
+    private List<Book> BorrowsBook= new ArrayList<>();
+
+
 
     public Person(String name, String surname, LocalDate dateOfBirth, Adress adress) {
         this.name = name;
@@ -84,6 +87,17 @@ public class Person {
 
     }
 
+    public List<Book> getBorrowsBook() {
+        return BorrowsBook;
+    }
+
+    public void BorrwBook(Book book){
+        if (BorrowsBook.size()>1) {
+            throw new ValidationException("You cant borrw book");
+        }
+
+        BorrowsBook.add(book);
+    }
 
     @Override
     public String toString() {

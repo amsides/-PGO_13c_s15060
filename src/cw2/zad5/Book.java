@@ -156,12 +156,14 @@ public class Book {
         isAvaible = false;
         borrowCount++;
         borrowPerson = person;
+        person.BorrwBook(this);
 
 
     }
 
     public void PlaceBack() {
         isAvaible = true;
+        borrowPerson.getBorrowsBook().clear();
         borrowPerson = null;
     }
 
