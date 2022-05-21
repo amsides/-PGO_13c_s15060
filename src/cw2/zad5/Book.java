@@ -6,6 +6,7 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Random;
 
 
@@ -167,6 +168,23 @@ public class Book {
         borrowPerson = null;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return ID == book.ID &&
+                Objects.equals(name, book.name) &&
+                genre == book.genre &&
+                Language == book.Language &&
+                Objects.equals(publishDate, book.publishDate) &&
+                Objects.equals(author, book.author);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(ID, name, genre, Language, publishDate, author);
+    }
 
     @Override
     public String toString() {

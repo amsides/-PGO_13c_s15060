@@ -1,6 +1,8 @@
 package cw2.zad5;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -32,5 +34,18 @@ public class Main {
         System.out.println(person1.getBooks().get(0).getAuthor());
         System.out.println(person1.getBooks().get(1).getAuthor());
         System.out.println(book2);
+
+        System.out.println( System.getProperty("java.version"));
+
+
+        List<Book>books=new ArrayList<>();
+
+        books.add(book2);
+
+        for (Book book:books) {
+
+        }
+
+
     }
 }
