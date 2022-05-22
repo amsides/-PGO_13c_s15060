@@ -2,10 +2,10 @@ package cw5.zad1;
 
 public class Figura {
 
-    private String name;
-
-    public Figura(String name) {
-        this.name = name;
+    protected String name;
+    public Figura(String name)
+    {
+        setName(name);
     }
 
     public String getName() {
@@ -13,39 +13,27 @@ public class Figura {
     }
 
     public void setName(String name) {
+        if(name.isEmpty())
+        {
+            throw new RuntimeException("cannot be empty");
+        }
+
         this.name = name;
     }
 
-    public int getArea(){
-
+    public double getArea()
+    {
         return 0;
     }
 
-
-
-    public double getArea(int a){
-
-        return (double) ((3.14)*a*a);
-    }
-
-    public int getPerimeter(){
-
+    public double getPerimeter()
+    {
         return 0;
-    }
-    public int getPerimeter(int a , int b ){
-
-        return (a+b)*2;
-    }
-
-    public double getPerimeter(int a ){
-
-        return 2*(3.14)*a;
     }
 
     @Override
-    public String toString() {
-        return "Figura{" +
-                "name='" + name + '\'' +
-                '}';
+    public String toString()
+    {
+        return name;
     }
 }

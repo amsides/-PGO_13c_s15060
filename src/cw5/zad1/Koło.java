@@ -2,36 +2,40 @@ package cw5.zad1;
 
 public class Koło extends Figura {
 
-    private String name;
-    private int promien;
-
-    public Koło(String name, int promien) {
-        super ( name=name);
-        this.promien = promien;
+    private double promien;
+    public Koło(String name, double promien)
+    {
+        super(name);
+        setPromien(promien);
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getPromien() {
+    public double getPromien() {
         return promien;
     }
 
-    public void setPromien(int promien) {
+    public void setPromien(double promien) {
+        if(promien < 0)
+        {
+            throw new RuntimeException("Cannot be lower than 0");
+        }
         this.promien = promien;
     }
 
+    @Override
+    public double getArea()
+    {
+        return Math.PI*promien*promien;
+    }
 
     @Override
-    public String toString() {
-        return "Koło{" +
-                "name='" + name + '\'' +
-                ", promien=" + promien +
-                '}';
+    public double getPerimeter()
+    {
+        return Math.PI*2*promien;
+    }
+
+    @Override
+    public String toString()
+    {
+        return super.toString() + " " + promien;
     }
 }

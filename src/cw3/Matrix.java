@@ -1,17 +1,17 @@
-package cw3.zad2;
+package cw3;
 
 
 
 public class Matrix {
 
-private int [][]matrix;
-private int rows;
-private int colums;
+    private int [][]matrix;
+    private int rows;
+    private int colums;
 
-private static int tmp1[][];
-private static int rowTmp;
-private static int columnsTmp;
-private static int rowTmp1;//licznik zaczyna od 0
+    private static int tmp1[][];
+    private static int rowTmp;
+    private static int columnsTmp;
+    private static int rowTmp1;//licznik zaczyna od 0
 
     private Matrix( int [][]tab , int row , int colum) {
         matrix=tab;
@@ -33,11 +33,11 @@ private static int rowTmp1;//licznik zaczyna od 0
         if (rowCount >0 && columnCount >0)
         {
 
-        int [][] tmp = new int [rowCount][columnCount];
-        tmp1=tmp;
-        rowTmp=rowCount;
-        rowTmp1=0;
-        columnsTmp=columnCount;
+            int [][] tmp = new int [rowCount][columnCount];
+            tmp1=tmp;
+            rowTmp=rowCount;
+            rowTmp1=0;
+            columnsTmp=columnCount;
         }
         else {
             throw new RuntimeException("rowCount i  columnCount muszą być większe od zera  ");
@@ -155,3 +155,4 @@ private static int rowTmp1;//licznik zaczyna od 0
         return tmp;
     }
 }
+

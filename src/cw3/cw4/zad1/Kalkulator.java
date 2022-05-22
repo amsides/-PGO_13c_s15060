@@ -1,4 +1,4 @@
-package cw4.zad1;
+package cw3.cw4.zad1;
 
 public class  Kalkulator {
 

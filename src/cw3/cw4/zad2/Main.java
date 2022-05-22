@@ -1,4 +1,4 @@
-package cw4.zad2;
+package cw3.cw4.zad2;
 
 public class Main {
     //psvm

@@ -1,6 +1,4 @@
-package cw4.zad3;
-
-import cw3.zad2.Matrix;
+package cw3.cw4.zad3;
 
 public class Main {
     public static void main(String[] args) {

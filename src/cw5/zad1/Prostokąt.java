@@ -2,49 +2,55 @@ package cw5.zad1;
 
 public class Prostokąt extends Figura {
 
-    private int bokA ;
-    private int bokB;
-
-    public Prostokąt(String name, int bokA, int bokB) {
-
-        super (name);
-        this.bokA = bokA;
-        this.bokB = bokB;
+    private double a;
+    private double b;
+    public Prostokąt(String name, double a, double b)
+    {
+        super(name);
+        setA(a);
+        setB(b);
     }
 
-
-
-
-
-    public int getBokA() {
-        return bokA;
+    public double getA() {
+        return a;
     }
 
-    public void setBokA(int bokA) {
-        this.bokA = bokA;
+    public void setA(double a) {
+        if(a < 0)
+        {
+            throw new RuntimeException("Cannot be lower than 0");
+        }
+        this.a = a;
     }
 
-
-
-
-    public int getBokB() {
-        return bokB;
+    public double getB() {
+        return b;
     }
 
-    public void setBokB(int bokB) {
-        this.bokB = bokB;
+    public void setB(double b) {
+        if(b < 0)
+        {
+            throw new RuntimeException("Cannot be lower than 0");
+        }
+        this.b = b;
     }
 
-    public int getArea(int a, int b){
-
+    @Override
+    public double getArea()
+    {
         return a*b;
     }
 
     @Override
-    public String toString() {
-        return "Prostokąt{" +
-                "bokA=" + bokA +
-                ", bokB=" + bokB +
-                '}';
+    public double getPerimeter()
+    {
+        return 2*(a+b);
+    }
+
+    @Override
+    public String toString()
+    {
+        return super.toString() + " " + a + " " + b;
     }
 }
+
