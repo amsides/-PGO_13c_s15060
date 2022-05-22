@@ -1,4 +1,4 @@
-package cw4.zad3;
+package cw3.zad2;
 
 
 
