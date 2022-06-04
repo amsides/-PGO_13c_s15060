@@ -1,4 +1,4 @@
-package cw3.cw4.zad3.exception;
+package cw4.zad3.exception;
 
 public class ValidationException extends RuntimeException {
 
