@@ -6,8 +6,8 @@ public abstract class Ingredient {
     protected int  baseReagent;
 
     public Ingredient(String name, int baseReagent) {
-        this.name = name;
-        this.baseReagent = baseReagent;
+       setName(name);
+        setBaseReagent(baseReagent);
     }
 
     protected   int getReagent(){

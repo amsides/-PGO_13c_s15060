@@ -36,11 +36,11 @@ public class Elixir {
     }
 
     public int getPower() {
-        if(isCreated==false){
+        if(isCreated==true){
 
             return power;
         }else
-            throw new RuntimeException("Aby otzymać power musisz stworzyć elixir");
+            throw new RuntimeException("Elixir jest stworzony nie mozna wyświetlić power");
     }
 
     public void setCatalyst(Liquid catalyst) {
@@ -109,7 +109,7 @@ public class Elixir {
     public void print (){
         System.out.println("Status stowrzenia :"+ isCreated);
         System.out.println("Nazwa elixiru :"+getName());
-        System.out.println("Siła elixiru :"+getPower());
+        System.out.println("Siła elixiru :"+ getPower() );
         System.out.println("Katalizator :"+ catalyst.getName());
         System.out.println("lista składników");
         getIngredients();
