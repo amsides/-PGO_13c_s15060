@@ -36,7 +36,7 @@ public class Elixir {
     }
 
     public int getPower() {
-        if(isCreated==true){
+        if(isCreated==false){
 
             return power;
         }else

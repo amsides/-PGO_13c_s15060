@@ -6,7 +6,7 @@ public class Alcohol extends Liquid{
 
     public Alcohol(String name, int baseReagent, int dissolubility,int percent) {
         super(name, baseReagent, dissolubility);
-        this.percent=percent;
+        setPercent(percent);
     }
 
 
