@@ -11,7 +11,7 @@ public interface Fun {
 
     static double minimum(Fun func,double a,double b,double alpha){
 
-        if (a >= b) {
+        if (a > b) {
             throw new RuntimeException("A musi być większe od  B.");
         }
         ArrayList<Double> result = new ArrayList<>();
