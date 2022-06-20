@@ -43,21 +43,22 @@ public class Voldemort extends Character implements Spells{
         targets.add(c);
 
     }
-
+    @Override
     public void castSpell(Spell s){
+        if (s == Spell.AvadaKedavra) {
+    for (int i = 0; i < targets.size(); i++) {
+        if (targets.get(i).getName().equals("Harry")) {
+            System.out.println(targets.get(i).getName() + " goes LOL...");
+            Avadcadabra(this);
+            System.out.println(this.getName() + " died.");
 
-            for (int i = 0; i <targets.size() ; i++) {
-                if(targets.get(i).getName().equals("Harry")){
-                    System.out.println(targets.get(i).getName()+" goes LOL...");
-                    Avadcadabra(this);
-                    System.out.println(this.getName()+ " died.");
+        } else {
 
-                }else {
-
-                    Avadcadabra(targets.get(i));
-                    System.out.println(targets.get(i).getName()+ " died.");
-                }
-            }
+            Avadcadabra(targets.get(i));
+            System.out.println(targets.get(i).getName() + " died.");
+        }
+    }
+}
         }
 
 

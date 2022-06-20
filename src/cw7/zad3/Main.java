@@ -44,7 +44,6 @@ public class Main {
         Character.status();
 
         youKnowWho.moveTo(Location.GodricsHollow);
-
         youKnowWho.target(james);
         youKnowWho.target(lily);
         youKnowWho.target(harry);

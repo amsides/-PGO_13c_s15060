@@ -33,6 +33,15 @@ public abstract class Character implements Comparable<Character> {
         setLocation(c.location);
     }
 
+    public void  moveTo(Location l){
+        this.setLocation(l);
+    }
+
+    public static void  MoveAllTo(Location l,Character c, Character c2){
+        c.setLocation(l);
+        c2.setLocation(l);
+    }
+
     public void say(String s, Character c){
         System.out.println(getName() +" to "+c.name);
         System.out.println("    "+s);
@@ -40,13 +49,8 @@ public abstract class Character implements Comparable<Character> {
     }
 
 
-    public static void  MoveAllTo(Location l,Character c, Character c2){
-       c.setLocation(l);
-       c2.setLocation(l);
-        }
-
-        public  void doSth(String s){
-            System.out.println(this.getName()+", I'm "+s);
+    public  void doSth(String s){
+        System.out.println(this.getName()+", I'm "+s);
 
         }
 
@@ -57,9 +61,7 @@ public abstract class Character implements Comparable<Character> {
 
      }
 
-   public void  moveTo(Location l){
-        this.setLocation(l);
-   }
+
 
    public static void status(){
        System.out.println("====Status====");
@@ -89,6 +91,9 @@ public abstract class Character implements Comparable<Character> {
     }
 
     public void setLocation(Location location) {
+        if(location==null){
+            throw new RuntimeException("Nie może być puste");
+        }
         this.location = location;
     }
 
@@ -97,6 +102,9 @@ public abstract class Character implements Comparable<Character> {
     }
 
     public void setLive(int live) {
+        if(live<0 || live >100){
+            throw new RuntimeException("Punkty życia myszą być pomiędzy 0 a 100");
+        }
         Live = live;
     }
 
@@ -115,6 +123,7 @@ public abstract class Character implements Comparable<Character> {
         lista.add(a);
 
     }
+    public void castSpell(Spell s){}
 
 
     @Override

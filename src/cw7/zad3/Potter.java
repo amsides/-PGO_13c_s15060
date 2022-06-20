@@ -16,4 +16,6 @@ public class Potter extends Child {
             setPowerLevel(7500);
         }
     }
+
+
 }
