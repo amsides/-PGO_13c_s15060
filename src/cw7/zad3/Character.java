@@ -15,6 +15,7 @@ public abstract class Character implements Comparable<Character> {
 
 
     private static List<Character> lista = new ArrayList<Character>();
+    protected List<Character> targets = new ArrayList<Character>();
 
     public Character(String name, Location location) {
      setName(name);
@@ -50,14 +51,14 @@ public abstract class Character implements Comparable<Character> {
 
 
     public  void doSth(String s){
-        System.out.println(this.getName()+", I'm "+s);
+        System.out.println("I'm "+this.getName()+", I'm "+s);
 
         }
 
      public static void doSth(String s, Character c1,Character c2, Character c3){
-         System.out.println(c1.getName()+", I'm "+s);
-         System.out.println(c2.getName()+", I'm "+s);
-         System.out.println(c3.getName()+", I'm "+s);
+         System.out.println("I'm "+c1.getName()+", I'm "+s);
+         System.out.println("I'm "+c2.getName()+", I'm "+s);
+         System.out.println("I'm "+c3.getName()+", I'm "+s);
 
      }
 
@@ -71,7 +72,7 @@ public abstract class Character implements Comparable<Character> {
                  System.out.println(c.getName()+" : "+c.getLive() );
 
        }
-       System.out.println("============");
+       System.out.println("==============");
    }
 
     public String getName() {

@@ -7,7 +7,7 @@ import java.util.List;
 public class Voldemort extends Character implements Spells{
 
     private List<String> horcruxs = new ArrayList<String>();
-    private List<Character> targets = new ArrayList<Character>();
+   // private List<Character> targets = new ArrayList<Character>();
 
     public Voldemort(String name, Location location) {
         super(name, location);
@@ -23,19 +23,21 @@ public class Voldemort extends Character implements Spells{
 
 
     public void createHorcruxes(int i) {
-        System.out.println("Created horcrux:");
         for (int j = 1; j <= i; j++) {
-            horcruxs.add("   horcrux " + (horcruxs.size()+1));
+            horcruxs.add("        horcrux " + (horcruxs.size()+1));
         }
     }
 
 
     public void printHorcruxes() {
         int i=0;
+        System.out.println("Created horcruxes:");
         for (String s:horcruxs) {
             System.out.println(horcruxs.get(i));
             i++;
+
         }
+
     }
 
 
